@@ -1,0 +1,43 @@
+@startuml CasosDeUso
+left to right direction
+actor Recepcionista
+actor Medico 
+actor Administrador 
+actor Paciente 
+
+rectangle "Sistema de Gestión Hospitalaria" {
+    Recepcionista --> (Registrar Paciente)
+    Recepcionista --> (Registar Alergia)
+    Recepcionista --> (Registrar Contraindicaciones)
+    Recepcionista --> (Consultar Historial)
+    Recepcionista --> (Agendar Cita)
+    Recepcionista --> (Confirmar Cita)
+    Medico --> (Registrar Diagnóstico)
+    Medico --> (Registrar Receta)
+    Medico --> (Marcar Cita En Atención)
+    Medico --> (Marcar Cita Atendida)
+    Administrador --> (Gestionar Personal)
+    Administrador --> (Asignar Especialidades)
+    Administrador --> (Gestionar Turnos)
+    Administrador --> (Asignar Salario Base)
+    Administrador --> (Asignar Bonificaciones)
+    Paciente --> (Solicitar Cita)
+    Paciente --> (Consultar Resultados de Exámenes)
+    Paciente --> (Consultar Historial)
+    Paciente --> (Cancelar Cita)
+    
+    (Agendar Cita) .> (Validar Disponibilidad Medico) : <<include>>
+    (Registrar Diagnóstico) .> (Actualizar Historial) : <<include>>
+    (Registrar Receta) .> (Actualizar Historial) : <<include>>
+    (Marcar Cita En Atención) .> (Actualizar Historial) : <<include>>
+    (Marcar Cita Atendida) .> (Actualizar Historial) : <<include>>
+
+    note right of (Agendar Cita)
+      Validación: el médico no debe tener otra cita en la misma fecha y hora.
+    end note
+
+    note left of (Registrar Diagnóstico)
+      El diagnóstico se registra en el historial del paciente.
+    end note
+}
+@enduml
