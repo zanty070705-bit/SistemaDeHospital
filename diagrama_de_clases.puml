@@ -1,0 +1,112 @@
+@startuml
+skinparam classBorderColor #4f46e5
+skinparam classArrowColor #818cf8
+
+abstract class Persona {
+  - id: Int
+  - nombre: String
+  - apellido: String
+  - fechaNacimiento: LocalDate
+  - email : String
+  --
+  + calcularEdad(): Int
+  + obtenerTipo(): String
+}
+class Paciente {
+  - historiaClinica: String
+  - grupoSanguineo: String
+  - alergias: List<String>
+  - citas: List<CitaMedica>
+  --
+  + agregarAlergias(): string
+  + obtenerHistorial()
+}
+abstract class Empleado {
+  - fechaContratacion: LocalDate
+  - IdEmpleado: Int
+  - SalarioBase: double
+  - Activo: Boolean
+  + Antiguedad: int
+  --
+  + CalcularSalario(): double
+}
+class Cirujano {
+  - CirugiasRealizadas: int
+  - disponibleEmergencias: boolean
+  --
+  + realizarCirugia()
+  + calcularBono()
+}
+class Enfermero {
+  - turno: String
+  - AreaAsignada: String
+  - pacienteACargo: List<Paciente>
+  --
+  + metodo(): void
+}
+class Medico {
+  - especialidad: Especialidad
+  - pacienteAsignado: List <Paciente>
+  --
+  - citasAtendidas:
+  - List <Paciente>
+}
+class Especialidad {
+  - codigo: Int
+  - nombre: String
+  - descripcion: String
+  - costoConsulta: double
+  --
+  + metodo(): void
+}
+class Diagnostico {
+  - Id: Int
+  - descripcion: String
+  - receta: String
+  - fecha: LocalDate
+  --
+  + calcularCosto(): double
+  + completar(Diagnostico)
+  + cancelar
+}
+class NuevaClase {
+  - atributo: String
+  --
+  + metodo(): void
+}
+class CitaMedica {
+  - id: int
+  - paciente: Paciente
+  - medico: Medico
+  - fecha: LocalDate
+  - hora: localTime
+  - motivo: String
+  --
+  + calcularCosto(): double
+  + completar:
+  + cancelar()
+}
+class Hospital {
+  - nombre: String
+  - direccion: String
+  - empleado: List <Empleado>
+  - paciente: List <Paciente>
+  - citas: List <CitaMedica>
+  --
+  + metodo(): void
+}
+
+Paciente <|-- Persona
+Persona <|-- Empleado
+Empleado <|-- Persona
+Enfermero <|-- Empleado
+Cirujano <|-- Empleado
+Medico <|-- Empleado
+Cirujano <|-- Medico
+Medico <|-- Paciente
+Medico --> Paciente
+Especialidad --> Medico
+Diagnostico --> Paciente
+Diagnostico --> CitaMedica
+CitaMedica *-- Hospital
+@enduml
