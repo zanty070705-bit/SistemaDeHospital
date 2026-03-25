@@ -1,0 +1,39 @@
+ID----------------------------------------Historia------------------------------------------------------------------------Prioridad-------------Story Points
+HU-01:	Como recepcionista, quiero registrar pacientes con datos personales, historial clínico y grupo sanguíneo    
+        para mantener un historial médico digital.	                                                                    Alta                     5
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+HU-02: Como recepcionista, quiero registrar las alergias de mis pacientes para evitar reacciones adversas.	            Alta	             3
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+HU-03: Como recepcionista, quiero registrar las contraindicaciones de mis pacientes para prevenir tratamientos
+        peligrosos.                                                                                                         Alta	             3
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+HU-04: Como recepcionista, quiero consultar el historial médico de un paciente para gestionar su atención.	            Alta	             4
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+HU-05: Como paciente, quiero consultar mi historial médico para revisar mis citas anteriores.	                            Alta	             3
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+HU-06: Como administrador, quiero contratar médicos, cirujanos y enfermeros para que atiendan a los pacientes.              Alta	             5
+----------------------------------------------------------------------------------------------------------------------------------------------------------
+HU-07: Como administrador, quiero asignar especialidades médicas a los médicos para cobrar tarifas según especialidad.       Alta	             5
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+HU-08: Como administrador, quiero gestionar los turnos de trabajo de los empleados para garantizar 
+       cobertura en todos los horarios.	                                                                                    Alta	             4
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+HU-09: Como administrador, quiero asignar salarios base a los empleados para que el sistema calcule
+       automáticamente el salario final con sus bonificaciones.                                                             Media	             4
+--------------------------------------------------------------------------------------------------------------------------------------------------------
+HU-10: Como recepcionista, quiero agendar citas médicas validando la disponibilidad de los médicos 
+       para evitar conflictos de horario.	                                                                            Alta	             5
+--------------------------------------------------------------------------------------------------------------------------------------------------------
+HU-11: Como recepcionista, quiero confirmar citas de los pacientes para tener una comunicación clara
+y evitar errores de asistencia.	                                                                                             Media	             3
+-------------------------------------------------------------------------------------------------------------------------------------------------------
+HU-12: Como paciente, quiero cancelar mi cita para liberarla en caso de un evento inesperado que me impida asistir.	     Media	            2
+-------------------------------------------------------------------------------------------------------------------------------------------------------
+HU-13: Como médico, quiero registrar el diagnóstico de un paciente para mantener su historial clínico actualizado.	     Alta	            5
+------------------------------------------------------------------------------------------------------------------------------------------------------
+HU-14: Como médico, quiero registrar recetas médicas para que el paciente tenga acceso al tratamiento necesario.	     Alta	            5
+------------------------------------------------------------------------------------------------------------------------------------------------------
+HU-15: Como médico, quiero marcar una cita como "En Atención" para indicar que el paciente está siendo atendido
+        en ese momento.	                                                                                                     Media	            2
+------------------------------------------------------------------------------------------------------------------------------------------------------
+
